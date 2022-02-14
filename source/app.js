@@ -7,6 +7,8 @@ const path = require('path') // this is node js core module
 const express = require('express')
 const app = express()
 
+const port = process.env.PORT || 3000
+
 // Define Paths for Express config
 const publicDirectoryPath = path.join(__dirname, "../public") //path to static
 const viewsPath = path.join(__dirname, '../templates/views') //path to views
@@ -102,6 +104,6 @@ app.get('*', (req, resp) => {
 
 // Server Creating at port 3000
 
-app.listen(3000, () => {
-    console.log("Servere is up on port 3000.")
+app.listen(port, () => {
+    console.log("Servere is up on port" + port)
 })
