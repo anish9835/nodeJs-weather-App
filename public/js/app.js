@@ -18,9 +18,9 @@ weatherForm.addEventListener('submit', (event) => {
                 para2.textContent = ""
                 console.log(data.error)
             } else {
-                console.log(data)
+                // console.log(data)
                 para1.textContent = data.cityName
-                para2.innerHTML = `${data.temp.day}°C ${data.weather[0].description} <br> Max temperature ${data.temp.max}°C <br> Min temperature ${data.temp.min}°C`
+                para2.innerHTML = `${data.temp.day}°C ${data.weather[0].description} <br> <br> Max temperature ${data.temp.max}°C <br> <br>Min temperature ${data.temp.min}°C`
             }
         })
     })
