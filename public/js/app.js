@@ -20,7 +20,7 @@ weatherForm.addEventListener('submit', (event) => {
             } else {
                 console.log(data)
                 para1.textContent = data.cityName
-                para2.textContent = `${data.temp.day}°C ${data.weather[0].description}`
+                para2.innerHTML = `${data.temp.day}°C ${data.weather[0].description} <br> Max temperature ${data.temp.max}°C <br> Min temperature ${data.temp.min}°C`
             }
         })
     })
